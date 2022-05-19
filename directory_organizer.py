@@ -13,8 +13,9 @@ from glob import glob
 
 ## FILL IN BELOW
 source_dir ="./Downloads/" ## folder to track # example for Windows C:\\Users\\Name\\Downloads
-ext_list=list([os.path.splitext(i)[1] for i in glob(source_dir+"*")])
-ext_list=[x.strip() for x in ext_list if x.strip()]
+ext_list=list([os.path.splitext(i)[1] for i in glob(source_dir+"*")]) ## list of file extention with folder in a source_dir
+ext_list=[x.strip() for x in ext_list if x.strip()] ## list of file extention without folder  in a source_dir 
+################################# destination directory  #########################################
 dest_dir_ppt = source_dir+"PPT_doc/"## folder for images
 dest_dir_excel = source_dir+"excel_doc/"## folder for images
 dest_dir_music =  source_dir+"musics/"## folder for images
@@ -23,6 +24,7 @@ dest_dir_image =  source_dir+"images/"## folder for images## etc
 dest_dir_pdf = source_dir+"pdf/"## folder for images #example "C:\\Users\\Name\\Desktop\\Pdfs"
 dest_dir_zip = source_dir+"zip/"## folder for images #example "C:\\Users\\Name\\Desktop\\Pdfs"
 dest_dir_others = source_dir+"others/"## folder for images #example "C:\\Users\\Name\\Desktop\\Pdfs"
+#################################################################
 path = source_dir+"*{}"
 file_types =ext_list# [".doc",".mov",".mp4",".mp3",".wav",".xlsx",".csv",".zip", ".rar",".jpg", ".pdf", ".png", ".txt",".ppt",".pptx",".docx"]
 fnames = []
